@@ -36,6 +36,6 @@ public class MotionScr : MonoBehaviour
 
     private void Movement(Vector3 direction)
     {
-        transform.position = transform.position + direction * _speed;
+        transform.position = transform.position + direction * _speed /* * Time.deltaTime*/;
     }
 }
