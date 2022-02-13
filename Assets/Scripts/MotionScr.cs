@@ -32,10 +32,16 @@ public class MotionScr : MonoBehaviour
         {
             Movement(Vector3.right);
         }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            Movement(Vector3.up);
+        }
     }
 
     private void Movement(Vector3 direction)
     {
-        transform.position = transform.position + direction * _speed /* * Time.deltaTime*/;
+        transform.position = transform.position + direction * _speed 
+             * Time.deltaTime
+            ;
     }
 }
