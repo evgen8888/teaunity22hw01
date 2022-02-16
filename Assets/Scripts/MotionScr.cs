@@ -14,7 +14,8 @@ public class MotionScr : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.W))
         {
@@ -40,8 +41,6 @@ public class MotionScr : MonoBehaviour
 
     private void Movement(Vector3 direction)
     {
-        transform.position = transform.position + direction * _speed 
-             * Time.deltaTime
-            ;
+        transform.position = transform.position + direction * _speed * Time.deltaTime;
     }
 }
